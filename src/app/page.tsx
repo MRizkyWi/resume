@@ -11,13 +11,10 @@ export default function Home() {
               Open to opportunities
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
-              Rizky Widyayulianto
+              M Rizky Widyayulianto
             </h1>
             <p className="mt-3 text-xl text-slate-600 dark:text-slate-400">
               Software Engineer
-            </p>
-            <p className="mt-1 text-slate-500 dark:text-slate-500">
-              Scalable Backend &amp; Microservice Architectures
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:justify-start">
               <ContactBadge icon="📧" text="rizky.widyayulianto@gmail.com" href="mailto:rizky.widyayulianto@gmail.com" />
@@ -54,28 +51,46 @@ export default function Home() {
               title="Software Engineer"
               company="Kredivo — Jakarta, Indonesia"
               period="Jun 2024 - Present"
-              description="Developed features in a microservice architecture to integrate with various financial institutions, including banks, ensuring seamless and secure transactions. Reduced operational business process time by 70% by designing and implementing integrations with Oracle NetSuite. Designed and implemented a backend system to support business operations in a new country, ensuring scalability and compliance. Improved inter-service communication and optimized database interactions, reducing latency and enhancing system stability."
+              bullets={[
+                "Developed features in a microservice architecture to integrate with various financial institutions, including banks, ensuring seamless and secure transactions.",
+                "Reduced operational business process time by 70% by designing and implementing integrations with Oracle NetSuite.",
+                "Designed and implemented a backend system to support business operations in a new country, ensuring scalability and compliance.",
+                "Improved inter-service communication and optimized database interactions, reducing latency and enhancing system stability.",
+              ]}
               tech={["Microservices", "Golang", "PostgreSQL", "Redis", "Kafka", "AWS"]}
             />
             <ExperienceCard
               title="Software Development Engineer 1"
               company="Ula — Jakarta, Indonesia"
               period="Jun 2021 - Mar 2024"
-              description="Improved administrative workflows and overall app performance by optimizing database queries, cutting loading times by 90%. Enhanced user experience by reducing app loading time by 70% through efficient caching mechanisms. Reduced system costs by 10% by optimizing log generation and storage. Designed and implemented a microservice using a Test-Driven Development (TDD) approach for an application serving 150,000 monthly active users. Strengthened system reliability and scalability by implementing automated testing and performance monitoring."
+              bullets={[
+                "Improved administrative workflows and overall app performance by optimizing database queries, cutting loading times by 90%.",
+                "Enhanced user experience by reducing app loading time by 70% through efficient caching mechanisms.",
+                "Reduced system costs by 10% by optimizing log generation and storage.",
+                "Designed and implemented a microservice using a Test-Driven Development (TDD) approach for an application serving 150,000 monthly active users.",
+                "Strengthened system reliability and scalability by implementing automated testing and performance monitoring.",
+              ]}
               tech={["Golang", "Python", "PostgreSQL", "Redis", "Docker", "AWS", "TDD"]}
             />
             <ExperienceCard
               title="Backend Engineer"
               company="Livein.id — Jakarta, Indonesia"
               period="Nov 2020 - Apr 2021"
-              description="Designed and developed a village tourism app from scratch within one month, implementing key features such as user authentication, package tour reservations, and payment processing. Collaborated closely with stakeholders, including the CEO and potential users, to gather requirements and ensure alignment with business needs. Delivered a scalable and user-friendly platform, optimizing booking workflows and ensuring secure payment transactions."
+              bullets={[
+                "Designed and developed a village tourism app from scratch within one month, implementing key features such as user authentication, package tour reservations, and payment processing.",
+                "Collaborated closely with stakeholders, including the CEO and potential users, to gather requirements and ensure alignment with business needs.",
+                "Delivered a scalable and user-friendly platform, optimizing booking workflows and ensuring secure payment transactions.",
+              ]}
               tech={["Golang", "PostgreSQL", "REST APIs", "Docker"]}
             />
             <ExperienceCard
               title="Software Engineer Intern"
               company="Tokopedia — Jakarta, Indonesia"
               period="Jan 2020 - Apr 2020"
-              description="Utilized agile development methodologies and collaborated with cross-functional teams. Developed and maintained unit and integration tests to ensure the reliability and stability of the platform."
+              bullets={[
+                "Utilized agile development methodologies and collaborated with cross-functional teams.",
+                "Developed and maintained unit and integration tests to ensure the reliability and stability of the platform.",
+              ]}
               tech={["Agile", "Unit Testing", "Integration Testing", "Golang"]}
             />
           </div>
@@ -153,36 +168,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section className="mb-16">
-          <SectionTitle>Projects</SectionTitle>
-          <div className="grid gap-6 sm:grid-cols-2">
-            <ProjectCard
-              title="E-Commerce Platform"
-              description="A full-stack e-commerce platform with real-time inventory management, payment integration, and admin dashboard."
-              tech={["Next.js", "TypeScript", "Stripe", "PostgreSQL"]}
-              href="#"
-            />
-            <ProjectCard
-              title="Task Management App"
-              description="A collaborative task management tool with real-time updates, drag-and-drop, and team workspaces."
-              tech={["React", "Node.js", "Socket.io", "MongoDB"]}
-              href="#"
-            />
-            <ProjectCard
-              title="Portfolio Website"
-              description="Personal portfolio and blog built with Next.js and MDX for content management."
-              tech={["Next.js", "MDX", "Tailwind CSS", "Vercel"]}
-              href="#"
-            />
-            <ProjectCard
-              title="Weather Dashboard"
-              description="Real-time weather dashboard with forecasts, charts, and location-based search."
-              tech={["React", "Chart.js", "OpenWeather API"]}
-              href="#"
-            />
-          </div>
-        </section>
       </main>
 
       {/* Footer */}
@@ -229,13 +214,13 @@ function ExperienceCard({
   title,
   company,
   period,
-  description,
+  bullets,
   tech,
 }: {
   title: string;
   company: string;
   period: string;
-  description: string;
+  bullets: string[];
   tech: string[];
 }) {
   return (
@@ -251,7 +236,11 @@ function ExperienceCard({
             {period}
           </span>
         </div>
-        <p className="mt-3 text-slate-600 dark:text-slate-400">{description}</p>
+        <ul className="mt-3 list-disc space-y-1.5 pl-5 text-slate-600 dark:text-slate-400">
+          {bullets.map((b, i) => (
+            <li key={i}>{b}</li>
+          ))}
+        </ul>
         <div className="mt-4 flex flex-wrap gap-2">
           {tech.map((t) => (
             <span
