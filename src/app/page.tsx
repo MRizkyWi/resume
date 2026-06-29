@@ -17,13 +17,13 @@ export default function Home() {
               Software Engineer
             </p>
             <p className="mt-1 text-slate-500 dark:text-slate-500">
-              Building robust and scalable applications
+              Scalable Backend &amp; Microservice Architectures
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:justify-start">
-              <ContactBadge icon="📧" text="rizky@example.com" href="mailto:rizky@example.com" />
-              <ContactBadge icon="🔗" text="linkedin.com/in/rizky" href="https://linkedin.com/in/rizky" />
-              <ContactBadge icon="💻" text="github.com/rizky" href="https://github.com/rizky" />
-              <ContactBadge icon="📍" text="Indonesia" />
+              <ContactBadge icon="📧" text="rizky.widyayulianto@gmail.com" href="mailto:rizky.widyayulianto@gmail.com" />
+              <ContactBadge icon="📞" text="+62 888-0977-7560" href="tel:+6288809777560" />
+              <ContactBadge icon="🔗" text="linkedin.com/in/mrizkywi" href="https://www.linkedin.com/in/mrizkywi" />
+              <ContactBadge icon="📍" text="Jakarta, Indonesia" />
             </div>
           </div>
         </div>
@@ -35,11 +35,13 @@ export default function Home() {
           <SectionTitle>About</SectionTitle>
           <div className="rounded-2xl border border-slate-200 bg-white/80 p-8 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/80">
             <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-              Passionate software engineer with extensive experience in building modern web
-              applications. Skilled in TypeScript, React, Next.js, and backend technologies.
-              Strong focus on writing clean, maintainable code and delivering exceptional user
-              experiences. Constantly learning and exploring new technologies to solve
-              real-world problems.
+              Highly skilled Software Engineer with over 5 years of experience specializing in
+              scalable backend development and microservice architectures. Proven track record
+              of improving system performance and reducing costs, including a 70% reduction in
+              app loading time and a 10% decrease in system costs by optimizing log storage.
+              Experienced in leading cross-functional teams to design, develop, and deploy
+              high-impact solutions, with a strong focus on reliability and Test-Driven
+              Development (TDD).
             </p>
           </div>
         </section>
@@ -49,25 +51,32 @@ export default function Home() {
           <SectionTitle>Experience</SectionTitle>
           <div className="space-y-6">
             <ExperienceCard
-              title="Senior Software Engineer"
-              company="Tech Company Inc."
-              period="Jan 2023 - Present"
-              description="Led development of microservices architecture serving 1M+ users. Improved application performance by 40% through code optimization and caching strategies."
-              tech={["TypeScript", "React", "Node.js", "PostgreSQL", "AWS"]}
-            />
-            <ExperienceCard
               title="Software Engineer"
-              company="Startup ABC"
-              period="Jun 2021 - Dec 2022"
-              description="Built and maintained full-stack web applications. Collaborated with cross-functional teams to deliver features on tight deadlines."
-              tech={["JavaScript", "React", "Next.js", "MongoDB", "Docker"]}
+              company="Kredivo — Jakarta, Indonesia"
+              period="Jun 2024 - Present"
+              description="Developed features in a microservice architecture to integrate with various financial institutions, including banks, ensuring seamless and secure transactions. Reduced operational business process time by 70% by designing and implementing integrations with Oracle NetSuite. Designed and implemented a backend system to support business operations in a new country, ensuring scalability and compliance. Improved inter-service communication and optimized database interactions, reducing latency and enhancing system stability."
+              tech={["Microservices", "Golang", "PostgreSQL", "Redis", "Kafka", "AWS"]}
             />
             <ExperienceCard
-              title="Junior Developer"
-              company="Web Agency XYZ"
-              period="Mar 2020 - May 2021"
-              description="Developed responsive websites and web applications for various clients. Contributed to internal tooling and component library."
-              tech={["HTML/CSS", "JavaScript", "React", "PHP", "MySQL"]}
+              title="Software Development Engineer 1"
+              company="Ula — Jakarta, Indonesia"
+              period="Jun 2021 - Mar 2024"
+              description="Improved administrative workflows and overall app performance by optimizing database queries, cutting loading times by 90%. Enhanced user experience by reducing app loading time by 70% through efficient caching mechanisms. Reduced system costs by 10% by optimizing log generation and storage. Designed and implemented a microservice using a Test-Driven Development (TDD) approach for an application serving 150,000 monthly active users. Strengthened system reliability and scalability by implementing automated testing and performance monitoring."
+              tech={["Golang", "Python", "PostgreSQL", "Redis", "Docker", "AWS", "TDD"]}
+            />
+            <ExperienceCard
+              title="Backend Engineer"
+              company="Livein.id — Jakarta, Indonesia"
+              period="Nov 2020 - Apr 2021"
+              description="Designed and developed a village tourism app from scratch within one month, implementing key features such as user authentication, package tour reservations, and payment processing. Collaborated closely with stakeholders, including the CEO and potential users, to gather requirements and ensure alignment with business needs. Delivered a scalable and user-friendly platform, optimizing booking workflows and ensuring secure payment transactions."
+              tech={["Golang", "PostgreSQL", "REST APIs", "Docker"]}
+            />
+            <ExperienceCard
+              title="Software Engineer Intern"
+              company="Tokopedia — Jakarta, Indonesia"
+              period="Jan 2020 - Apr 2020"
+              description="Utilized agile development methodologies and collaborated with cross-functional teams. Developed and maintained unit and integration tests to ensure the reliability and stability of the platform."
+              tech={["Agile", "Unit Testing", "Integration Testing", "Golang"]}
             />
           </div>
         </section>
@@ -79,15 +88,54 @@ export default function Home() {
             <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
               <div>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-                  Bachelor of Computer Science
+                  Bachelor&apos;s Degree in Computer Science
                 </h3>
                 <p className="mt-1 text-slate-600 dark:text-slate-400">
-                  University of Indonesia
+                  Pertamina University
+                </p>
+                <p className="mt-1 text-sm text-slate-500 dark:text-slate-500">
+                  GPA: 3.55 / 4.0
                 </p>
               </div>
               <span className="inline-flex shrink-0 items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700 dark:bg-blue-900 dark:text-blue-300">
-                2016 - 2020
+                Aug 2016 - Nov 2020
               </span>
+            </div>
+            <div className="mt-4 border-t border-slate-100 pt-4 dark:border-slate-700">
+              <p className="text-sm font-medium text-slate-700 dark:text-slate-300">Relevant Coursework:</p>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                Website Development, API Development, Data Structure &amp; Algorithm, Database, Network,
+                Machine Learning, Business Intelligence, Product Management, Entrepreneurship
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section className="mb-16">
+          <SectionTitle>Certifications</SectionTitle>
+          <div className="space-y-4">
+            <div className="rounded-2xl border border-slate-200 bg-white/80 p-6 backdrop-blur-sm transition-all hover:border-amber-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/80 dark:hover:border-amber-700">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Google Cybersecurity</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Coursera</p>
+                </div>
+                <span className="inline-flex shrink-0 items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700 dark:bg-amber-900 dark:text-amber-300">
+                  Oct 2023
+                </span>
+              </div>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white/80 p-6 backdrop-blur-sm transition-all hover:border-amber-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/80 dark:hover:border-amber-700">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white">EF SET English Certificate 80/100 (C2 Proficient)</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">EF Standard English Test</p>
+                </div>
+                <span className="inline-flex shrink-0 items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700 dark:bg-amber-900 dark:text-amber-300">
+                  May 2023
+                </span>
+              </div>
             </div>
           </div>
         </section>
@@ -96,9 +144,12 @@ export default function Home() {
         <section className="mb-16">
           <SectionTitle>Skills</SectionTitle>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <SkillCard title="Frontend" skills={["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"]} />
-            <SkillCard title="Backend" skills={["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs"]} />
-            <SkillCard title="DevOps & Tools" skills={["Docker", "AWS", "Git", "CI/CD", "Linux"]} />
+            <SkillCard title="Languages" skills={["Golang", "Python", "TypeScript", "JavaScript", "Node.js", "Java", "C++"]} />
+            <SkillCard title="Databases" skills={["MySQL", "PostgreSQL", "MongoDB", "Redis", "Elasticsearch"]} />
+            <SkillCard title="Architecture & Practices" skills={["Microservices", "CI/CD", "REST APIs", "TDD", "Unit Testing"]} />
+            <SkillCard title="Cloud & DevOps" skills={["AWS", "Docker", "Git"]} />
+            <SkillCard title="Messaging & Streaming" skills={["Kafka"]} />
+            <SkillCard title="Monitoring & Observability" skills={["DataDog", "New Relic", "Scalyr", "Grafana"]} />
           </div>
         </section>
 
